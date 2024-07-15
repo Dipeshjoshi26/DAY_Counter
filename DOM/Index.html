@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Manipulation Example</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>Hello, World!</p>
+  </div>
+
+  <script>
+    // Selecting an element by ID
+    const myDiv = document.getElementById('myDiv');
+    console.log(myDiv);
+
+    // Using querySelector to select an element
+    const paragraph = document.querySelector('#myDiv p');
+    console.log(paragraph);
+    myDiv.textContent = 'Hello , Javascript';
+    myDiv.innerHTML = '<p>Hello again!</p>';
+    myDiv.setAttribute('class', 'important');
+    myDiv.style.backgroundColor = 'yellow';
+
+    // Adding an event listener
+myDiv.addEventListener('click', function() {
+  alert('You clicked the div!');
+});
+// Creating a new paragraph element
+const newParagraph = document.createElement('p');
+newParagraph.textContent = 'This is a new paragraph.';
+
+// Appending the new paragraph to an existing div
+myDiv.appendChild(newParagraph);
+
+// Removing a child element
+// myDiv.removeChild(newParagraph);
+
+// Clearing all content
+// myDiv.innerHTML = '';
+
+
+// Adding a CSS class
+myDiv.classList.add('highlight');
+
+
+// // Removing a CSS class
+// myDiv.classList.remove('highlight');
+
+// Toggling a CSS class
+myDiv.classList.toggle('highlight');
+
+  </script>
+</body>
+</html>
